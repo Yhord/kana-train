@@ -65,7 +65,7 @@ startGame();
   <ChooseCorresponding :answers="answers" :goodAnswer="goodAnswer" :category="category" :isKanasMuted="isKanasMuted" :isMuted="isMuted" @response="() => startGame()" />
   <div id="icon-bar">
     <div id="backarrows-bar" title="Go back to kanas selection">
-      <IconBackArrows class="icon" @click="this.$router.push({ name:'home' })" />
+      <IconBackArrows class="icon" @click="$router.push({ name:'home' })" />
     </div>
     <div id="sound-bar">
       <div id="soundKanas" title="Mute/unmute kanas sounds">
