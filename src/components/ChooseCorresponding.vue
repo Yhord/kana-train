@@ -9,7 +9,7 @@ import { getKanaData } from '../utils.js'
 const p = defineProps(['answers', 'goodAnswer', 'category', 'isKanasMuted', 'isMuted']);
 const emit = defineEmits(['response'])
 
-const audioPath = '../audio/general/';
+const audioPath = '../kana-train/audio/general/';
 const right = new Audio(audioPath + 'good_answer'  + '.mp3');
 const wrong = new Audio(audioPath + 'negative_answer'  + '.mp3');
 
@@ -27,7 +27,7 @@ function playKanasMuted(choice) {
 
 function playKanas(choice) {
     try {
-      new Audio('../audio/kanas/' + getKanaData(choice).hiragana  + '.mp3').play();
+      new Audio('../kana-train/audio/kanas/' + getKanaData(choice).hiragana  + '.mp3').play();
     }
     catch (error) {
       console.error(error);
